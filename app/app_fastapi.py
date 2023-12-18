@@ -28,7 +28,7 @@ def read_root():
     return 'Hello, FastAPI!'
 
 
-@app.post('/clf_text')
+@app.post('/')
 def class_text(data: TextClass):
 
     tokenized_text = tokenizer(data.text, max_length=512, padding=True, truncation=True, return_tensors='pt')
